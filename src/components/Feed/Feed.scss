@@ -1,0 +1,6 @@
+@import '../../mixin';
+.feed-container {
+    @include flexCenter();
+    flex-direction: column;
+    width: 100%;
+}

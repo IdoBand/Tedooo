@@ -1,0 +1,18 @@
+$main-background-color: rgb(240, 240, 240);
+$search-bar-height: 35px;
+$search-bar-border-radius: 20px;
+$active-color: rgb(60, 200, 200);
+$font-gray-color: rgb(150,150,150);
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading-container {
+    @include flexCenter();
+    width: 100%;
+    padding: 10px 0 10px 0;
+    color: red;
+}
+

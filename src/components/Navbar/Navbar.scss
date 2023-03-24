@@ -1,0 +1,92 @@
+@import '../../mixin';
+* {
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: $main-background-color;
+}
+.navbar-container {
+    @include flexCenter();
+    background-color: white;
+    width: 100%;
+}
+.search-bar-logo {
+    fill: red;
+    color: red;
+    stroke: red;
+}
+header {
+    @include flexCenter();
+    justify-content: space-between;
+    width: 80%;
+    height: 50px;
+    .logo-search-container {
+        @include flexCenter();
+        .search-bar-left{
+            @include flexCenter();
+            background-color: $main-background-color;
+            height: $search-bar-height;
+            border-radius: $search-bar-border-radius 0 0 $search-bar-border-radius;
+            .search-bar-logo{
+                padding: 10px;
+                width: 15px;
+                height: 15px;
+            }
+        }
+        .search-bar{
+            padding: 0;
+            height: $search-bar-height;
+            border: none;
+            border-radius: 0px $search-bar-border-radius $search-bar-border-radius 0;
+            background-color: $main-background-color;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    .logo {
+        border-radius: 5px;
+        width: 35px;
+        height: 35px;
+        margin: 0 10px 0 0;
+    }
+
+}
+@mixin basic-nav-li {
+    @include flexCenter();
+    margin: 0 7px 0 7px;
+    height: 47px;
+    a {
+        margin-left: 5px; 
+    }
+}
+
+.nav-container {
+    @include flexCenter();
+    .nav-li {
+        @include basic-nav-li();
+        color: $font-gray-color;
+        border-bottom: 3px solid transparent;
+    }
+    .nav-li-active {
+        @include basic-nav-li();
+        color: $active-color;
+        border-bottom: 3px solid $active-color;
+        stroke: $active-color;
+    }
+    .nav-button {
+        color: inherit;
+    }
+}
+
+.avatar{
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin-left: 5px;
+}

@@ -1,0 +1,1 @@
+project is using Vite, to run: ```npm start```
